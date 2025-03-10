@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connectify - CBIT Student Collaboration Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ06.2E4lJ5oZdyL9vJkZwW7bV6L5lP1UHX0K7c7XaM3Qbd57mLRk0Ffv8zF" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background-color: #007bff;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #ffd700;
+            color: white;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .section {
+            display: none;
+        }
+        .active-section {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" onclick="showSection('home')">Connectify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="showSection('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('categories')">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('signup')">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('login')">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active-section">
+        <div class="hero">
+            <div class="container">
+                <h1 class="display-4">Welcome to Connectify!</h1>
+                <p class="lead">A platform to connect CBIT students for research, projects, and entertainment. Find collaborators and make new friends!</p>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-custom btn-lg me-3" onclick="showSection('signup')">Join Now</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg" onclick="showSection('categories')">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">About Connectify</h2>
+            <p>Connectify is a platform designed for students at CBIT to connect with each other. Whether you're looking for research collaborators, project partners, or simply friends for entertainment, Connectify makes it easy to find like-minded individuals and collaborate on exciting opportunities.</p>
+            <p>We aim to create a strong community of students across all branches to foster innovation and personal growth.</p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Categories</h2>
+            <p class="text-center">Explore various categories where you can connect with others:</p>
+            <ul>
+                <li>Research Collaborations</li>
+                <li>Project Collaborations</li>
+                <li>Entertainment & Fun</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Sign Up for Connectify</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signup-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="signup-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signup-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signup-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signup-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signup-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Login to Connectify</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Connectify | <a href="#">Contact us</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybPqGhtj6dHT8e5g8hwX1fDkw7TfN4ldf8O9t9AqXz2mChz3ii" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0fA2Rng4l4Apxa4fp8I5I1RtFqgTzN2V7cXb8wAmf4/Jx5LB" crossorigin="anonymous"></script>
+
+    <!-- JavaScript to show and hide sections -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section) => {
+                section.classList.remove('active-section');
+            });
+            document.getElementById(sectionId).classList.add('active-section');
+
+            // Update active navbar link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
